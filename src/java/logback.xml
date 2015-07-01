@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{yyyy.MM.dd#HH:mm:ss} %-5p %m [%M \(%F:%L\) ]%n</pattern>
+    </encoder>
+  </appender>
+<!--
+  <logger name="org" level="FATAL"/>
+  <logger name="com" level="FATAL"/>
+-->
+  <!--
+  <logger name="org.hibernate.type" level="ALL" />
+  <logger name="org.hibernate.type" level="ALL" />
+   -->
+  <logger name="org.hibernate" level="WARN" />
+  <logger name="org.hibernate.type" level="WARN" />
+  <root level="INFO">
+    <appender-ref ref="stdout"/>
+  </root>
+</configuration>
+
+<!--
+<pattern>%d{yyyy.MM.dd#HH:mm:ss} %-5p %m [%M (%F:%L)]%n</pattern>
+# 2011.04.28#20:24:54 INFO  Hallo Welt [printMessage (Helloworld.java:85)]
+# %p prioeritaet (-5 Breite von 5), %m mesage, %M methodname, %n line break
+# (%F:%L) erzeugt (Filename:Linenumber) und wird von Eclipse anklickbar geparst.
+# Davor muss entweder ein Leer, oder der volle Pfad stehen. Dahinter darf alles folgen. Die Klammern und der Doppelpunkt sind notwendig
+# %l erzeugt das ganze mit vollem Pfad, ist also kur fuer %C(%F:%L)
+# ( und ) müssen escaped werden in logback, siehe http://logback.qos.ch/manual/layouts.html#Parentheses
+-->

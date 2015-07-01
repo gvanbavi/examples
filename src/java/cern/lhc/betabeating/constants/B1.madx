@@ -1,0 +1,4 @@
+seqedit, sequence=LHCB1;
+flatten;
+cycle, start=MKI.A5R8.B1;
+endedit; 
